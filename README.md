@@ -10,6 +10,21 @@ A aplicação exibe um formulário simples com campo de texto e botão para gera
 - em caso de sucesso, renderiza a imagem do QR Code na tela;
 - em caso de erro, exibe a mensagem retornada pelo backend.
 
+<br>
+
+<p align="left">
+  <img 
+    width="300" 
+    alt="Fluxo de geração de QR Code e upload para S3 com Angular, Spring Boot, AWS S3 e LocalStack" 
+    src="https://github.com/user-attachments/assets/cbc0eee5-161f-48f2-9178-1408f0ba8309" 
+  />
+  <img 
+    width="300"
+    alt="Imagem do projeto"
+    src="https://github.com/user-attachments/assets/3d49faf2-4e58-411e-b968-00c12e06b822" 
+  />
+</p>
+
 ## Funcionalidades
 
 - Geração de QR Code via integração HTTP.
