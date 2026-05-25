@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
+
+:host {
+  display: block;
+  font-family: 'Manrope', 'Avenir Next', 'Segoe UI Variable', sans-serif;
+  color: #101828;
+}
+
+.qr-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px 16px;
+  background: linear-gradient(150deg, #f5f7fb 0%, #e8edf5 100%);
+}
+
+.qr-card {
+  width: min(720px, 100%);
+  padding: clamp(24px, 4vw, 36px);
+  border-radius: 24px;
+  border: 1px solid rgba(29, 41, 57, 0.12);
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow:
+    0 20px 40px -24px rgba(16, 24, 40, 0.35),
+    0 8px 14px -10px rgba(16, 24, 40, 0.25);
+}
+
+.card-header {
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.77rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #475467;
+}
+
+h1 {
+  margin: 8px 0 10px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0;
+  color: #475467;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.qr-form {
+  display: grid;
+  gap: 10px;
+}
+
+.qr-form label {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #475467;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-error {
+  color: #b42318;
+}
+
+.input-row {
+  display: grid;
+  gap: 12px;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  border-radius: 14px;
+  border: 1px solid #c9d3e1;
+  background: #fff;
+  padding: 0 14px;
+  font-size: 1rem;
+  color: #101828;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #344054;
+  box-shadow: 0 0 0 4px rgba(52, 64, 84, 0.12);
+}
+
+button {
+  height: 50px;
+  border: 0;
+  border-radius: 14px;
+  background: #1d2939;
+  color: #fff;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover:not(:disabled) {
+  background: #101828;
+  transform: translateY(-1px);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.result {
+  margin-top: 26px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(29, 41, 57, 0.12);
+}
+
+.result p {
+  margin: 0;
+  font-weight: 600;
+  color: #475467;
+}
+
+.result img {
+  width: min(250px, 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(29, 41, 57, 0.12);
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 16px 24px -20px rgba(16, 24, 40, 0.35);
+}
+
+@media (min-width: 720px) {
+  .input-row {
+    grid-template-columns: 1fr auto;
+  }
+
+  button {
+    width: 170px;
+  }
+}

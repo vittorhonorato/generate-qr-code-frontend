@@ -1,0 +1,35 @@
+<main class="qr-page">
+  <section class="qr-card">
+    <header class="card-header">
+      <p class="eyebrow">Gerador de QR Code</p>
+      <h1>Transforme um link em QR Code</h1>
+      <p class="subtitle">
+        Cole uma URL e gere uma imagem limpa e pronta para compartilhar.
+      </p>
+    </header>
+
+    <form class="qr-form" [formGroup]="qrcodeForm" (ngSubmit)="submit()">
+      <label for="qr-text">URL</label>
+      <div class="input-row">
+        <input
+          id="qr-text"
+          formControlName="text"
+          type="text"
+          placeholder="https://seusite.com.br"
+          autocomplete="off"
+          (input)="backendError = ''"
+        >
+        <button type="submit" [disabled]="qrcodeForm.invalid">Gerar QR Code</button>
+      </div>
+      <p class="form-error" *ngIf="backendError">{{ backendError }}</p>
+    </form>
+
+    <section class="result" *ngIf="url">
+      <p>QR Code gerado</p>
+      <img
+        [src]="url"
+        alt="QR Code gerado"
+      >
+    </section>
+  </section>
+</main>
